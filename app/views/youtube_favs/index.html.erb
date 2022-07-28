@@ -1,0 +1,17 @@
+<div class="main-content">
+
+  <div style="text-align: center">
+    <h3 style="margin: 20px 0 50px 0;">
+      Welcome to your Favorite Youtube Videos Collection
+    </h3>
+
+    <% if @user.videos.size > 0 %>
+      <h3 style="font-size: 14px"> <%= "Your Collection:".upcase %> </h3>
+      <%= render 'collection' %>
+    <% else %>
+      <%= render 'no_collection' %>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'confirm_modal' %>

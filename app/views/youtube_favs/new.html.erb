@@ -1,0 +1,14 @@
+<div class="main-content">
+  <h3>Add new video</h3>
+  <hr>
+
+  <p>Adding new video to your collection is pretty easy!</p>
+  <p>You just need to provide the video url down below.</p>
+
+  <%= form_with model: @video, url:"/youtubefavs/new", class: "new-video-form" do |form|  %>
+    <p id="new-video-messages">Messages</p>
+    <%= form.text_field "url", {id: "new-input", placeholder: "youtube video url"} %>
+    <%= form.submit "add", { id: "new-btn", disabled: "" , class: "btn"}  %>
+  <% end %>
+
+</div>

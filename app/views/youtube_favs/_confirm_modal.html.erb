@@ -1,0 +1,27 @@
+<div class="hidden" id="delete_confirmation_modal">
+  <div id="modal-background"></div>
+  <div class="delete-confirm-modal">
+    <h3>Confirm you want to delete this video from your collection?</h3>
+
+    <div class="video-info">
+      <div class="video-info-thumb-container">
+        <img style="width: 100px" id="video-info-thumb" src="">
+      </div>
+
+      <p style="margin-left: 10px" id="video-info-title"></p>
+    </div>
+
+    <hr>
+
+    <div style="display: flex; justify-content: space-between">
+      <button class="btn cancel" id="modal-btn-cancel">cancel</button>
+      <%= form_with url:"/youtubefavs" do |form| %>
+        <%= form.text_field "video_id", {id: "video-info-id", style: "display: none"} %>
+        <%= form.submit "Yes, delete video", class: "btn" %>
+      <% end %>
+    </div>
+
+
+  </div>
+
+</div>

@@ -1,0 +1,174 @@
+.user-collection a {
+    color: unset;
+}
+
+.main-content {
+    width: 50%;
+    margin: 0 auto;
+    /*background-color: #CCCCCC;*/
+    /*padding: 20px;*/
+}
+
+.video-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.video-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.video-container:hover {
+    background-color: #f0f0f0;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    justify-content: center;
+    opacity: 0;
+    position: relative;
+    fill: #555353;
+}
+
+.options span {
+    width: 20px;
+}
+
+.options form {
+    height: 100%;
+    display: flex;
+    padding: 10px 0;
+    cursor: auto;
+}
+
+.options form button {
+    border: none;
+    width: 100%;
+    background: unset;
+    cursor: pointer;
+    height: 38px;
+}
+
+.options form button:hover {
+    background-color: #f0f0f0;
+}
+
+.video-container:hover .options {
+    opacity: 1;
+}
+
+
+.videos {
+    display: grid;
+    text-align: center;
+    width: 200px;
+    margin: 15px;
+    font-size: 10px ;
+}
+
+.video-thumb {
+    width: 150px;
+}
+
+.collection-content {
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    padding: 16px 0;
+    flex: 1;
+}
+
+.thumb {
+    width: 120px;
+}
+
+.meta {
+    display: grid;
+    text-align: left;
+}
+
+.new-video-form {
+    margin-top: 50px
+}
+
+.new-video-form input[type="submit"]{
+    width: 100px;
+    margin-top: 10px;
+    height: 44px;
+}
+
+.new-video-form input[type="submit"]:enabled:hover {
+    background-color: rgba(33, 33, 33, 0.98);
+}
+
+.new-video-form input[type="text"]{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #a1a1a1;
+    border-radius: 5px;
+}
+
+#new-video-messages {
+    color: red;
+    font-size: 12px;
+    opacity: 0;
+}
+
+#modal-background {
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 59%;
+}
+
+.delete-confirm-modal {
+    opacity: 1;
+    background-color: white;
+    border: 1px solid gainsboro;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    position: absolute;
+    padding: 50px;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+}
+
+.hidden {
+    display: none;
+}
+
+.video-info {
+    display: flex;
+    align-items: center;
+}
+
+.video-info-thumb-container {
+    width: 100px;
+    height: 55px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.options-item {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.options-item:hover {
+    background-color: #EFEFEF;
+}
+
+#delete_confirmation_modal .cancel:hover {
+    background-color: black;
+}

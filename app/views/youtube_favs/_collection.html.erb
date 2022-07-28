@@ -1,0 +1,45 @@
+<div class="user-collection">
+  <% @videos.each do |video| %>
+    <a target="_blank" href="<%= video["url"] %>">
+      <div class="video-container" video-id="<%= video["video_id"] %>" thumb-url="<%= video["thumb-url"] %>" title="<%= video["title"] %>">
+        <div style="display: flex; align-items: center; padding: 0 10px">
+        <span style="width: 20px; fill: #555353">
+          <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;">
+            <g class="style-scope yt-icon"><path d="M21,10H3V9h18V10z M21,14H3v1h18V14z" class="style-scope yt-icon"></path></g>
+          </svg>
+        </span>
+
+        </div>
+        <div class="collection-content">
+          <div style="position: relative; width: 120px; height: 67px; overflow: hidden; margin-right: 10px;">
+            <img style="position: absolute; width: 100%; left: 0; top: calc(50% - 45px)" src="<%= video["thumb-url"] %>">
+          </div>
+          <div class="meta">
+            <div style="font-size: 14px; font-weight: bold;"> <%= video["title"] %> </div>
+            <div style="font-size: 12px"> <%= video["channel"] %> </div>
+          </div>
+
+        </div>
+        <div class="options">
+          <span class="options-btn">
+            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;">
+              <g class="style-scope yt-icon"><path d="M12,16.5c0.83,0,1.5,0.67,1.5,1.5s-0.67,1.5-1.5,1.5s-1.5-0.67-1.5-1.5S11.17,16.5,12,16.5z M10.5,12 c0,0.83,0.67,1.5,1.5,1.5s1.5-0.67,1.5-1.5s-0.67-1.5-1.5-1.5S10.5,11.17,10.5,12z M10.5,6c0,0.83,0.67,1.5,1.5,1.5 s1.5-0.67,1.5-1.5S12.83,4.5,12,4.5S10.5,5.17,10.5,6z" class="style-scope yt-icon"></path></g>
+            </svg>
+          </span>
+
+          <div class="options-list" style="background-color: white; position: absolute; right: 0; top: 25px; width: 170px; display: none; padding: 10px 0; cursor: auto; font-size: 14px; z-index: 1; border: 1px solid gainsboro">
+            <div class="options-item" video-id="<%= video["video_id"] %>">Delete video</div>
+
+            <%#= form_with url: "/youtubefavs" do |form| %>
+            <%#= form.text_field "video_id", {value: video["video_id"]} %>
+            <%#= form.submit "ENVIAR" %>
+            <%# end %>
+            <%#= button_to "Delete video", "/youtubefavs" %>
+          </div>
+
+        </div>
+      </div>
+    </a>
+
+  <% end %>
+</div>

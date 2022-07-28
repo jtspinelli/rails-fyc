@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FYC</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <% #javascript_include_tag(controller_name) %>
+
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@300&display=swap');
+  </style>
+</head>
+
+<body style="margin: 0">
+
+<%= render "layouts/github" %>
+
+<%= render "layouts/navbar" unless session[:user_id].nil? %>
+
+<%= flash_message %>
+
+<%= yield %>
+
+</body>
+</html>

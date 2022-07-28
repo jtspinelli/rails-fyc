@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+.inline-form {
+    display: inline-block;
+}
+
+.sign-in-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid gainsboro;
+    background-color: unset;
+    min-width: 260px;
+    font-size: 15px;
+}
+
+.sign-in-btn:hover {
+    cursor: pointer;
+    background-color: #F6F6F6;
+}
+
+.twitter-logo {
+    color: rgb(29, 155, 240);
+    fill: currentColor;
+}
+
+.logo {
+    height: 15px;
+    margin-left: 5px;
+}
+
+.fb-f {
+    fill: white;
+}
+
+.fb .logo{
+    width: 20px;
+}
